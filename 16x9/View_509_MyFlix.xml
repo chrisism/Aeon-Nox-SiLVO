@@ -320,6 +320,7 @@
 						<control type="grouplist">
 						    <control type="label" id="4460"><visible>false</visible><label>$VAR[GameStudio]</label></control>
 							<control type="label" id="4461"><visible>false</visible><label>$VAR[GameGenre]</label></control>
+							<control type="label" id="4462"><visible>false</visible><label>$VAR[GameYear]</label></control>
 							<control type="label">
 								<width>800</width>
 								<height>45</height>
@@ -338,13 +339,41 @@
 								<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[515]: [/COLOR]$VAR[GameGenre]</label>
 								<visible>!String.IsEmpty(Control.GetLabel(4461))</visible>
 							</control>
-							<control type="label">
-								<width>1000</width>
+
+							<control type="grouplist">
+								<orientation>horizontal</orientation>
 								<height>45</height>
-								<textcolor>grey</textcolor>
-								<shadowcolor>shadow</shadowcolor>
-								<include>DefaultButtonsValues</include>
-								<label>$VAR[GameYear,, • ]$VAR[GameRating]</label>
+								<width>800</width>
+								<itemgap>10</itemgap>
+								<control type="label">
+									<width>30</width>
+									<height>45</height>
+									<textcolor>grey</textcolor>
+									<shadowcolor>shadow</shadowcolor>
+									<include>DefaultButtonsValues</include>
+									<label>$VAR[GameYear]</label>
+								</control>
+								<control type="label">
+									<width>20</width>
+									<label></label>
+								</control>
+								<control type="label">
+									<width>10</width>
+									<height>45</height>
+									<textcolor>grey</textcolor>
+									<shadowcolor>shadow</shadowcolor>
+									<include>DefaultButtonsValues</include>
+									<label>•</label>
+									<visible>!String.IsEmpty(Control.GetLabel(4462) + !String.IsEmpty(Control.GetLabel(4463)</visible>
+								</control>
+								<control type="label" id="4463">
+									<width>250</width>
+									<height>45</height>
+									<textcolor>grey</textcolor>
+									<shadowcolor>shadow</shadowcolor>
+									<include>DefaultButtonsValues</include>
+									<label>$VAR[GameRating]</label>
+								</control>
 							</control>
 						</control>
 						<!-- Plot -->

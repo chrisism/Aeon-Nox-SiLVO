@@ -2172,6 +2172,7 @@
 	<!-- GAMES -->
 	<variable name="GameTitle">
 		<value condition="!String.IsEmpty(Game.Title)">$INFO[Game.Title]</value>
+		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="GamePlot">
