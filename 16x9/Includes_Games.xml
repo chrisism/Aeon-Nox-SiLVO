@@ -65,8 +65,6 @@
 	<!-- Footer flags for games -->
 	<include name="GameFooterFlags">
 		<!-- hidden helpers -->
-		<control type="label" id="4471"><visible>false</visible><label>$VAR[GameNumOfPlayers]</label></control>	
-		<control type="label" id="4472"><visible>false</visible><label>$VAR[GameESRB]</label></control>	
 		<control type="grouplist">
 			<visible>$EXP[InGameMode]</visible>
 			<width>1665</width>
@@ -75,40 +73,77 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<!-- Game Studio -->
-			<control type="image" id="912">
+			<control type="group">
+				<left>120</left>
 				<width>160</width>
-				<include>MediaFlagValues</include>
-				<texture>$VAR[PathFlagsGameStudios]$VAR[GameStudio,,.png]</texture>
+				<control type="image" id="912">
+					<width>160</width>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[PathFlagsGameStudios]$VAR[GameStudio,,.png]</texture>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<width>140</width>
+					<height>90</height>
+					<align>center</align>
+					<label>$VAR[GameStudio]</label>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.IsEmpty(Control.GetLabel(912))</visible>
+				</control>
 			</control>
 			<!-- Game ESRB -->
 			<control type="group">
-				<visible>!String.IsEmpty(Control.GetLabel(4472))</visible>
-				<width>70</width>
+				<visible>!String.IsEmpty(ListItem.Property(esrb))</visible>
+				<width>120</width>
 				<animation effect="slide" end="-160" condition="Control.IsVisible(50)">Conditional</animation>
 				<control type="image">
 					<include>MediaFlagValues</include>
-					<texture fallback="flags/esrb/RP (Rating Pending).png">$VAR[PathFlagsGameESRB]$VAR[GameESRB,,.png]</texture>
+					<texture fallback="flags/esrb/RP (Rating Pending).png">$VAR[PathFlagsGameESRB]$INFO[ListItem.Property(esrb),,.png]</texture>
 				</control>
 			</control>
 			<!-- Game Number of players -->
 			<control type="group">
-				<visible>!String.IsEmpty(Control.GetLabel(4471))</visible>
-				<width>80</width>
-				<animation effect="slide" end="-160" condition="Control.IsVisible(50)">Conditional</animation>
-				<control type="image">
-					<include>MediaFlagValues</include>
-					<height>90</height>
-					<texture>DefaultUser.png</texture>
+				<width>162.5</width>
+				<visible>!String.IsEmpty(ListItem.Property(nplayers))</visible>
+				<control type="label">
+					<top>2</top>
+					<height>60</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(nplayers)]</label>
+					<font>font48_bold</font>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
-					<left>80</left>
-					<width>80</width>
-					<height>90</height>
+					<top>52</top>
+					<height>30</height>
 					<align>center</align>
-					<label>$VAR[GameNumOfPlayers]</label>
-					<font>font10</font>
+					<label>[LOWERCASE]$VAR[OneOrMoreLocalPlayersVar][/LOWERCASE]</label>
+					<font>font12</font>
 					<textcolor>grey</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(nplayers_online))</visible>
+				<width>162.5</width>
+				<control type="label">
+					<top>2</top>
+					<height>60</height>
+					<align>center</align>
+					<label>$INFO[ListItem.Property(nplayers_online)]</label>
+					<font>font48_bold</font>
 					<wrapmultiline>true</wrapmultiline>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="label">
+					<top>52</top>
+					<height>30</height>
+					<align>center</align>
+					<label>[LOWERCASE]$VAR[OneOrMoreOnlinePlayersVar][/LOWERCASE]</label>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
 				</control>
 			</control>
 			<!-- Resolutions -->

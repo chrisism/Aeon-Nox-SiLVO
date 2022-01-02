@@ -3092,6 +3092,14 @@ msgctxt "#32001"
 msgid "Resource image addon for displaying the game studio icons in game views"
 msgstr ""
 
+msgctxt "#32010"
+msgid "Player"
+msgstr "Player"
+
+msgctxt "#32011"
+msgid "Players"
+msgstr "Players"
+
 #~ msgctxt "#31332"
 #~ msgid "Not Installed"
 #~ msgstr "Not Installed"

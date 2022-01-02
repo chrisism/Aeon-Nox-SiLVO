@@ -2200,11 +2200,13 @@
 	<variable name="GameRating">
 		<value>$INFO[ListItem.Rating]</value>
 	</variable>
-	<variable name="GameESRB">
-		<value>$INFO[ListItem.Property(esrb)]</value>
+	<variable name="OneOrMoreLocalPlayersVar">
+		<value condition="String.IsEqual(Container.ListItem.Property(nplayers),1) | String.IsEqual(ListItem.Property(nplayers),1)">$LOCALIZE[32010]</value>
+		<value>$LOCALIZE[32011]</value>
 	</variable>
-	<variable name="GameNumOfPlayers">
-		<value>$INFO[ListItem.Property(nplayers)]</value>
+	<variable name="OneOrMoreOnlinePlayersVar">
+		<value condition="String.IsEqual(Container.ListItem.Property(nplayers_online),1) | String.IsEqual(ListItem.Property(nplayers_online),1)">$LOCALIZE[32010]</value>
+		<value>$LOCALIZE[32011]</value>
 	</variable>
 	<variable name="GameAudioFlag">
 		<value condition="String.Contains(ListItem.Property(tags),atmos)">atmos.png</value>
