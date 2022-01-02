@@ -1972,7 +1972,8 @@
 	</variable>
 	<variable name="MyFlixItemShape">
 		<value condition="$EXP[InGameMode] + !String.IsEmpty(ListItem.Property(boxsize))">$INFO[ListItem.Property(boxsize)]</value>
-		<value>Poster</value>
+		<value condition="$EXP[InGameMode] + !String.IsEmpty(Container.Property(boxsize))">$INFO[Container.Property(boxsize)]</value>
+		<value>poster</value>
 	</variable>
 	<variable name="ShortcutsDisabledVar">
 		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR invalid]×[/COLOR] </value>
