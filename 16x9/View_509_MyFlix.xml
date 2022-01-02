@@ -22,9 +22,14 @@
 				<animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
 				<visible>Skin.HasSetting(Enable.MyFlix.OpenCase) + ListItem.IsCollection</visible>
 			</control>
+			<control type="label" id="4449">
+				<description>MyFlix Game Icon Size</description>
+				<label>$VAR[MyFlixItemShape]</label>
+				<include>HiddenObject</include>
+			</control>
 			<!-- Info Panel -->
 			<control type="group">
-				<animation effect="slide" start="0" end="0,140" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)] | [$EXP[InGameMode] + Skin.HasSetting(Enable.MyFlix.GameLandscape)]">Conditional</animation>
+				<animation effect="slide" start="0" end="0,140" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)]">Conditional</animation>
 				<control type="group">
 					<animation effect="slide" end="0,320" condition="Skin.HasSetting(Disable.MyFlixInfo)">Conditional</animation>
 					<control type="image" id="50999">
@@ -38,7 +43,7 @@
 					</control>
 					<control type="group">
 						<top>75</top>
-						<animation effect="slide" start="0" end="0,60" condition="[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(Enable.MyFlix.MovieLogo)] | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLogo)] | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]">Conditional</animation>
+						<animation effect="slide" start="0" end="0,60" condition="[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(Enable.MyFlix.MovieLogo)] | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLogo)]">Conditional</animation>
 						<control type="group">
 							<visible>!Control.IsVisible(50999) | String.IsEmpty(Control.GetLabel(50999))</visible>
 							<left>25</left>
@@ -407,7 +412,8 @@
 				<pagecontrol>50960</pagecontrol>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="525" width="271" condition="[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLandscape)] | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]">
+				<!-- Poster -->
+				<itemlayout height="525" width="271" condition="!EXP[InGameMode] + [Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLandscape)]">
 					<control type="image">
 						<include>FlixNoCaseVars</include>
 						<texture background="true">$VAR[CaseBackPathVar]$VAR[GlobalCaseVar]</texture>
@@ -434,7 +440,7 @@
 					<include>FlixPosterReflection</include>
 					<include>FlixPosterCaseReflection</include>
 				</itemlayout>
-				<focusedlayout height="525" width="271" condition="[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLandscape)] | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]">
+				<focusedlayout height="525" width="271" condition="!EXP[InGameMode] + [Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [Container.Content(tvshows) + !Skin.HasSetting(Enable.MyFlix.TVLandscape)]">
 					<control type="group">
 						<visible>[[Container.Content(movies) | Container.Content(sets)] + Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.OpenCase)] | [[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(Enable.MyFlix.OpenCase)] | Container.Content(tvshows) | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
 						<control type="image">
@@ -455,7 +461,8 @@
 						<include>FlixPosterCaseReflection</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="270" width="480" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)] | [$EXP[InGameMode] + Skin.HasSetting(Enable.MyFlix.GameLandscape)]">
+				<!-- Landscape -->
+				<itemlayout height="270" width="480" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)]">
 					<include>FlixLandscape</include>
 					<control type="image">
 						<left>410</left>
@@ -476,7 +483,7 @@
 					</control>
 					<include>FlixLandscapeReflection</include>
 				</itemlayout>
-				<focusedlayout height="270" width="480" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)] | [$EXP[InGameMode] + Skin.HasSetting(Enable.MyFlix.GameLandscape)]">
+				<focusedlayout height="270" width="480" condition="[Container.Content(movies) + Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(tvshows) + Skin.HasSetting(Enable.MyFlix.TVLandscape)]">
 					<include>FlixLandscape</include>
 					<control type="image">
 						<left>410</left>
@@ -488,6 +495,7 @@
 					</control>
 					<include>FlixLandscapeReflection</include>
 				</focusedlayout>
+				<!-- TV Show Episodes -->
 				<itemlayout height="270" width="480" condition="Container.Content(episodes)">
 					<include>FlixEpisodeThumb</include>
 					<control type="image">
@@ -520,10 +528,226 @@
 						<visible>!String.IsEmpty(Skin.String(509.Episodes.DisableOverlay)) + Container.Content(episodes)</visible>
 					</control>
 				</focusedlayout>
+				<!-- Game: Poster/DVD box (NES, Sega, PS2, PC)-->
+				<itemlayout height="525" width="271" condition="$EXP[InGameMode] + [$EXP[UsePoster] | $EXP[UseDvdShape]]">
+					<include content="FlixGame">
+						<param name="left">10</param>
+						<param name="top">75</param>
+						<param name="width">268</param>
+						<param name="height">390</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>197</top>
+						<width>270</width>
+						<height>270</height>
+						<texture border="1">black.png</texture>
+						<colordiffuse>$VAR[MyFlixDimmerVar]</colordiffuse>
+						<bordersize>20</bordersize>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">29</param>
+						<param name="top">458</param>
+						<param name="width">228</param>
+						<param name="height">402</param>
+					</include>
+				</itemlayout>
+				<focusedlayout height="525" width="271" condition="$EXP[InGameMode] + [$EXP[UsePoster] | $EXP[UseDvdShape]]">
+					<include content="FlixGame">
+						<param name="left">10</param>
+						<param name="top">75</param>
+						<param name="width">268</param>
+						<param name="height">390</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">29</param>
+						<param name="top">458</param>
+						<param name="width">228</param>
+						<param name="height">402</param>
+					</include>
+				</focusedlayout>
+				<!-- Game: Blu-Ray cover (PS3)-->
+				<itemlayout height="312" width="260" condition="$EXP[InGameMode] + $EXP[UseBlurayShape]">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">260</param>
+						<param name="height">312</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>197</top>
+						<width>270</width>
+						<height>270</height>
+						<texture border="1">black.png</texture>
+						<colordiffuse>$VAR[MyFlixDimmerVar]</colordiffuse>
+						<bordersize>20</bordersize>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">260</param>
+						<param name="height">312</param>
+					</include>
+				</itemlayout>
+				<focusedlayout height="312" width="260" condition="$EXP[InGameMode] + $EXP[UseBlurayShape]">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">260</param>
+						<param name="height">312</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">260</param>
+						<param name="height">312</param>
+					</include>
+				</focusedlayout>
+        		<!-- Game: Square shape (icons, Gameboy, PS1 etc) -->
+				<itemlayout height="270" width="270" condition="$EXP[InGameMode] + $EXP[UseSquareShape]">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">270</param>
+						<param name="height">270</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>197</top>
+						<width>270</width>
+						<height>270</height>
+						<texture border="1">black.png</texture>
+						<colordiffuse>$VAR[MyFlixDimmerVar]</colordiffuse>
+						<bordersize>20</bordersize>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">270</param>
+						<param name="height">270</param>
+					</include>
+				</itemlayout>
+				<focusedlayout height="270" width="270" condition="$EXP[InGameMode] + $EXP[UseSquareShape]">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">270</param>
+						<param name="height">270</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">270</param>
+						<param name="height">270</param>
+					</include>
+				</focusedlayout>
+				<!-- Game: Wideshape / Landscape (SNES, N64) -->
+				<itemlayout height="270" width="480" condition="$EXP[InGameMode] + $EXP[UseWideShape]">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">480</param>
+						<param name="height">270</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>197</top>
+						<width>480</width>
+						<height>270</height>
+						<texture border="1">black.png</texture>
+						<colordiffuse>$VAR[MyFlixDimmerVar]</colordiffuse>
+						<bordersize>20</bordersize>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">440</param>
+						<param name="height">270</param>
+					</include>
+				</itemlayout>
+				<focusedlayout height="270" width="480" condition="$EXP[InGameMode] + $EXP[UseWideShape]">">
+					<include content="FlixGame">
+						<param name="left">-10</param>
+						<param name="top">197</param>
+						<param name="width">480</param>
+						<param name="height">270</param>
+					</include>
+					<control type="image">
+						<left>410</left>
+						<top>217</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+					<include content="FlixGameReflection">
+						<param name="left">10</param>
+						<param name="top">465</param>
+						<param name="width">440</param>
+						<param name="height">270</param>
+					</include>
+				</focusedlayout>					
 			</control>
 			<control type="group">
 				<top>518</top>
-				<visible>[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(sets)] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.OpenCase)] | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]</visible>
+				<visible>[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | [Container.Content(sets)] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
 				<control type="image">
 					<include>FlixCaseVars</include>
 					<texture background="true">$VAR[CaseBackPathVar]$VAR[GlobalCaseVar]</texture>
@@ -542,7 +766,7 @@
 				<top>669</top>
 				<width>215</width>
 				<height>215</height>
-				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.Cases) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
+				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets)] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.Cases) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
 				<include>MyFlixRollingMovieSetDiscs</include>
 			</control>
 			<control type="group">
@@ -550,12 +774,12 @@
 				<top>682</top>
 				<width>211</width>
 				<height>211</height>
-				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]] + !Control.IsVisible(7000) + !Skin.HasSetting(Enable.MyFlix.Cases) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
+				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets)] + !Control.IsVisible(7000) + !Skin.HasSetting(Enable.MyFlix.Cases) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
 				<animation effect="slide" end="-2,-11" condition="Skin.HasSetting(useclearcases)">Conditional</animation>
 				<include>MyFlixRollingMovieSetDiscs</include>
 			</control>
 			<control type="group" id="7000">
-				<visible>[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]] + [Container.OnNext | Container.OnPrevious] + Skin.HasSetting(Enable.MyFlix.OpenCase)</visible>
+				<visible>[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets)] + [Container.OnNext | Container.OnPrevious] + Skin.HasSetting(Enable.MyFlix.OpenCase)</visible>
 				<animation effect="fade" time="1000" end="0" reversible="false">Hidden</animation>
 				<control type="label">
 					<include>HiddenObject</include>
@@ -563,7 +787,7 @@
 			</control>
 			<control type="group">
 				<top>518</top>
-				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets) | [$EXP[InGameMode] + !Skin.HasSetting(Enable.MyFlix.GameLandscape)]] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
+				<visible>[[[Container.Content(movies) + !Skin.HasSetting(Enable.MyFlix.MovieLandscape)] | Container.Content(sets)] + !Control.IsVisible(7000) + Skin.HasSetting(Enable.MyFlix.OpenCase)]</visible>
 				<include>MyFlixModAnimation</include>
 				<include>FlixPoster</include>
 				<control type="image">
@@ -616,6 +840,34 @@
 			<width>440</width>
 			<height>270</height>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeItem0Var]</texture>
+		</control>
+	</include>
+	<include name="FlixGame">
+		<param name="left" default="-10" />
+		<param name="top" />
+		<param name="width" />
+		<param name="height" />
+		<control type="image">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<texture background="true" diffuse="thumbs/thumb_mask.png">$VAR[GameThumb]</texture>
+			<bordertexture border="20">thumbs/thumb_shadow_aa.png</bordertexture>
+			<bordersize>20</bordersize>
+		</control>
+	</include>
+	<include name="FlixGameReflection">
+		<param name="left" default="10" />
+		<param name="top" />
+		<param name="width" />
+		<param name="height" />
+		<control type="image">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[GameThumb]</texture>
 		</control>
 	</include>
 	<include name="FlixEpisodeThumb">

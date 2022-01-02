@@ -1008,13 +1008,6 @@
 			<selected>Skin.HasSetting(Enable.MyFlix.TVLandscape)</selected>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
-		<control type="radiobutton" id="1520">
-			<include>ButtonCommonValues</include>
-			<label>$LOCALIZE[31076]</label>
-			<onclick>Skin.ToggleSetting(Enable.MyFlix.GameLandscape)</onclick>
-			<selected>Skin.HasSetting(Enable.MyFlix.GameLandscape)</selected>
-			<visible>$EXP[InGameMode]</visible>
-		</control>
 	</include>
 	<include name="BigFanViewSettings">
 		<!-- BigFan -->

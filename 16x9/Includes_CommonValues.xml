@@ -611,5 +611,16 @@
 	<expression name="GameHas4KResolution">String.Contains(ListItem.Property(tags),4k)</expression>
 	<expression name="GameHas720Resolution">String.Contains(ListItem.Property(tags),720)</expression>
 	<expression name="GameHas480Resolution">String.Contains(ListItem.Property(tags),480)</expression>
-
+	
+	<!-- Preferred thumb shapes -->	
+    <expression name="UsePosterShape">String.IsEqual(Control.GetLabel(4449),poster) | String.IsEmpty(Control.GetLabel(4449))</expression>
+    <expression name="UseDvdShape">String.IsEqual(Control.GetLabel(4449),dvd)</expression>
+    <expression name="UseCdShape">String.IsEqual(Control.GetLabel(4449),cd)</expression>
+    <expression name="UseBlurayShape">String.IsEqual(Control.GetLabel(4449),bluray)</expression>
+    <expression name="UseWideShape">String.IsEqual(Control.GetLabel(4449),widebox)</expression>
+    <expression name="Use3dsShape">String.IsEqual(Control.GetLabel(4449),3dsbox)</expression>
+    <expression name="UseSquareShape">String.IsEqual(Control.GetLabel(4449),squarebox)</expression>
+    <expression name="UseSlimShape">String.IsEqual(Control.GetLabel(4449),slimbox)</expression>
+    <expression name="UseSteamShape">String.IsEqual(Control.GetLabel(4449),steambanner)</expression>
+    <expression name="UseScreenshotShape">String.IsEqual(Control.GetLabel(4449),screenshot)</expression> 
 </includes>
