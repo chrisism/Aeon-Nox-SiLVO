@@ -146,47 +146,51 @@
 					<textcolor>grey</textcolor>
 				</control>
 			</control>
+			<control type="image">
+				<width>160</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[PathFlagsGame,,co-op.png]</texture>
+				<visible>String.Contains(ListItem.Property(tags),'co-op') | String.Contains(ListItem.Property(tags),'coop')</visible>
+			</control>
+			<control type="image">
+				<width>160</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[PathFlagsGame,,vs.png]</texture>
+				<visible>String.Contains(ListItem.Property(tags),'vs') | String.Contains(ListItem.Property(tags),'versus')| String.Contains(ListItem.Property(tags),'free-for-all')</visible>
+			</control>
 			<!-- Resolutions -->
-			<control type="group">
-				<animation effect="slide" end="-160" condition="Control.IsVisible(50)">Conditional</animation>
-				<control type="image">
-					<left>440</left>
-					<include>MediaFlagValues</include>
-					<visible>$EXP[GameHas4KResolution]</visible>
-					<texture>$VAR[MediaFlagsPathVar]/resolution/4K.png</texture>
-				</control>
-				<control type="image">
-					<left>440</left>
-					<include>MediaFlagValues</include>
-					<visible>$EXP[GameHas1080Resolution]</visible>
-					<texture>$VAR[MediaFlagsPathVar]/resolution/1080.png</texture>
-				</control>
-				<control type="image">
-					<left>440</left>
-					<include>MediaFlagValues</include>
-					<visible>$EXP[GameHas720Resolution]</visible>
-					<texture>$VAR[MediaFlagsPathVar]/resolution/720.png</texture>
-				</control>
-				<control type="image">
-					<left>440</left>
-					<include>MediaFlagValues</include>
-					<visible>$EXP[GameHas480Resolution]</visible>
-					<texture>$VAR[MediaFlagsPathVar]/resolution/480.png</texture>
-				</control>
-				<control type="image">
-					<left>555</left>
-					<top>-15</top>
-					<width>35</width>
-					<include>MediaFlagValues</include>
-					<texture>$VAR[MediaFlagsPathVar]/hdr.png</texture>
-					<visible>String.Contains(ListItem.Tags,hdr)</visible>
-					<animation effect="slide" end="10,1" condition="!Skin.HasSetting(coloredflags)">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>920</left>
-					<include>MediaFlagValues</include>
-					<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
-				</control>
+			<control type="image">
+				<include>MediaFlagValues</include>
+				<visible>$EXP[GameHas4KResolution]</visible>
+				<texture>$VAR[MediaFlagsPathVar]/resolution/4K.png</texture>
+			</control>
+			<control type="image">
+				<include>MediaFlagValues</include>
+				<visible>$EXP[GameHas1080Resolution]</visible>
+				<texture>$VAR[MediaFlagsPathVar]/resolution/1080.png</texture>
+			</control>
+			<control type="image">
+				<include>MediaFlagValues</include>
+				<visible>$EXP[GameHas720Resolution]</visible>
+				<texture>$VAR[MediaFlagsPathVar]/resolution/720.png</texture>
+			</control>
+			<control type="image">
+				<include>MediaFlagValues</include>
+				<visible>$EXP[GameHas480Resolution]</visible>
+				<texture>$VAR[MediaFlagsPathVar]/resolution/480.png</texture>
+			</control>
+			<control type="image">
+				<top>-15</top>
+				<width>35</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/hdr.png</texture>
+				<visible>String.Contains(ListItem.Tags,hdr)</visible>
+				<animation effect="slide" end="10,1" condition="!Skin.HasSetting(coloredflags)">Conditional</animation>
+			</control>
+			<!-- Audio -->
+			<control type="image">
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[GameAudioFlag]</texture>
 			</control>
 		</control>
 	</include>
