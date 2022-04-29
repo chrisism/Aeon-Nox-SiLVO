@@ -368,7 +368,7 @@
 									<shadowcolor>shadow</shadowcolor>
 									<include>DefaultButtonsValues</include>
 									<label>•</label>
-									<visible>!String.IsEmpty(Control.GetLabel(4462) + !String.IsEmpty(Control.GetLabel(4463)</visible>
+									<visible>!String.IsEmpty(Control.GetLabel(4462)) + !String.IsEmpty(Control.GetLabel(4463))</visible>
 								</control>
 								<control type="label" id="4463">
 									<width>250</width>
