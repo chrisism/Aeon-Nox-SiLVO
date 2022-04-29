@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-07 23:19+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2022-04-27 20:14+0000\n"
+"Last-Translator: PAV <paolopavese100@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-nox-silvo/it_it/>\n"
 "Language: it_it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.12\n"
 
 msgctxt "#31000"
 msgid "Directed by"
@@ -447,7 +447,7 @@ msgstr "Nella schermata informazioni"
 
 msgctxt "#31107"
 msgid "Persistent"
-msgstr "Fisso"
+msgstr "Permanente"
 
 msgctxt "#31108"
 msgid "Enable artist information feed (if available)"
@@ -459,7 +459,7 @@ msgstr "Contatore episodi non visti"
 
 msgctxt "#31110"
 msgid "Colorbox Script provides the blurred images for the Music and Video info dialogs as well as the fullscreen music blurred background."
-msgstr ""
+msgstr "Colorbox Script fornisce la sfocatura per il pannello Info della Musica e dei Video e per l'immagine a tutto schermo con la musica."
 
 msgctxt "#31111"
 msgid "Similar movies"
@@ -475,7 +475,7 @@ msgstr "Film scritti da"
 
 msgctxt "#31114"
 msgid "More from"
-msgstr ""
+msgstr "Altri da"
 
 msgctxt "#31115"
 msgid "Similar TV shows"
@@ -495,7 +495,7 @@ msgstr ""
 
 msgctxt "#31119"
 msgid "Show the movies from this director in your library or view online information on this director on TMDb?"
-msgstr "Mostra i film di questo regista nella tua libreria o visualizza informazioni online su questo regista su TMDb?"
+msgstr "Mostra i film di questo regista nella tua libreria o visualizza informazioni online su questo regista da TMDb?"
 
 msgctxt "#31120"
 msgid "TMDb"
@@ -523,11 +523,11 @@ msgstr "Mostra vista \"In riproduzione\" nello sfondo"
 
 msgctxt "#31126"
 msgid "Skin Helper Service adds extra information for the skin to display that is not normally available in Kodi."
-msgstr ""
+msgstr "Skin Helper consente di visionare informazioni extra che normalmente non sono disponibili con Kodi."
 
 msgctxt "#31127"
 msgid "Enable Extended Info integration"
-msgstr ""
+msgstr "Consente l'integrazione delle Informazioni estese"
 
 msgctxt "#31128"
 msgid "Channels View"
@@ -567,15 +567,15 @@ msgstr "Tipo della barra delle informazioni:"
 
 msgctxt "#31137"
 msgid "Hide encryption information"
-msgstr "Nascondi le informazioni crittografia"
+msgstr "Nascondi le informazioni crittografate"
 
 msgctxt "#31138"
 msgid "Hide tuner information"
-msgstr "Nascondi le informazioni sintonizzatore"
+msgstr "Nascondi le informazioni del sintonizzatore"
 
 msgctxt "#31139"
 msgid "Hide signal information"
-msgstr "Nascondi informazioni segnale"
+msgstr "Nascondi le informazioni del segnale"
 
 msgctxt "#31140"
 msgid "Sideblade Options"
@@ -635,7 +635,7 @@ msgstr "Disabilita viste"
 
 msgctxt "#31154"
 msgid "Show Artist Slideshow when playing music"
-msgstr ""
+msgstr "Mostra una sequenza di immagini dell'Artista durante la riproduzione della musica"
 
 msgctxt "#31155"
 msgid "Widgets"
@@ -643,7 +643,7 @@ msgstr "Widgets"
 
 msgctxt "#31156"
 msgid "Clearart"
-msgstr ""
+msgstr "Clearart"
 
 msgctxt "#31157"
 msgid "Submenu always visible"
@@ -651,7 +651,7 @@ msgstr "Sottomenu sempre visibili"
 
 msgctxt "#31158"
 msgid "Disable the Search icon "
-msgstr ""
+msgstr "Disabilita l'icona di ricerca "
 
 msgctxt "#31159"
 msgid "Event log"
@@ -663,63 +663,63 @@ msgstr "Esteso"
 
 msgctxt "#31161"
 msgid "Choose the position of the RSS feed. Top of the screen, bottom of the screen or the default location directly underneath the main menu."
-msgstr ""
+msgstr "Scegli la posizione degli RSS feed. In alto sullo schermo, in basso oppure nella posizione standard, proprio sotto il menu principale."
 
 msgctxt "#31162"
 msgid "Alternate"
-msgstr ""
+msgstr "Alternato"
 
 msgctxt "#31163"
 msgid "This movie is Unrated"
-msgstr ""
+msgstr "Questo film non è stato valutato"
 
 msgctxt "#31164"
 msgid "Enable live background for movie sets"
-msgstr ""
+msgstr "Abilita lo sfondo live per la collezione dei film"
 
 msgctxt "#31165"
 msgid "Enable to display live background for movie sets when browsing your movie library"
-msgstr ""
+msgstr "Abilita per visualizzare lo sfondo live della collezione dei film mentre navighi nel tuo archivio"
 
 msgctxt "#31166"
 msgid "Enable description for a movies rating"
-msgstr ""
+msgstr "Abilita la descrizione collegata alla valutazione del film"
 
 msgctxt "#31167"
 msgid "This setting displays a reason for a movies rating. You need to use a script like Rating Update to add these values (prefix must be Rated  including a space after Rated)"
-msgstr ""
+msgstr "Questa opzione mostra la motivazione connessa alla valutazione del film. E' necessario utilizzare uno script tipo Rating Update per ottenere queste info (il prefisso da usare è Rated  incluso uno spazio dopo Rated)"
 
 msgctxt "#31168"
 msgid "Enable to make the submenu permanently visible. Default is hidden until pressing down."
-msgstr ""
+msgstr "Abilita per rendere permanentemente visibile il sottomenu. Di default è nascosto fino a che non si preme giù."
 
 msgctxt "#31169"
 msgid "This setting hides the Search icon on the home screen."
-msgstr ""
+msgstr "Questa opzione nasconde l'Icona di ricerca sulla schermata principale."
 
 msgctxt "#31170"
 msgid "Enabling this setting will hide the alphanumeric label displaying the current position when scrolling through your library."
-msgstr ""
+msgstr "Abilitando questa opzione saranno nascoste tutte le etichette alfanumeriche che mostrano la posizione attuale mentre si scorre la libreria."
 
 msgctxt "#31171"
 msgid "This setting will activate fullscreen mode automatically after starting to play music."
-msgstr ""
+msgstr "Questa opzione consente di attivare automaticamente lo schermo intero appena parte la musica."
 
 msgctxt "#31172"
 msgid "Set the path to your music collection for displaying artist logos in the music visualisation and in some views that support it."
-msgstr ""
+msgstr "Stabilisci il percorso della tua collezione musicale per consentire la visualizzazione dei loghi del cantante nella modalità Visualizzazione Musica e in altre modalità che la supportano."
 
 msgctxt "#31173"
 msgid "Blur background (video info dialog)"
-msgstr ""
+msgstr "Sfuoca lo sfondo (Finestra Informazioni video)"
 
 msgctxt "#31174"
 msgid "Blur background behind information"
-msgstr ""
+msgstr "Sfuoca lo sfondo dietro il pannello informazioni"
 
 msgctxt "#31175"
 msgid "Set path to music collection/artwork (for artist logos)"
-msgstr ""
+msgstr "Stabilisci il percorso della collezione musicale/artwork (per i loghi cantante)"
 
 msgctxt "#31176"
 msgid "Trending Movies"
@@ -735,11 +735,11 @@ msgstr "Programmi popolari"
 
 msgctxt "#31179"
 msgid "Live TV settings"
-msgstr ""
+msgstr "Impostazioni Tv live"
 
 msgctxt "#31180"
 msgid "Minutes left"
-msgstr ""
+msgstr "Minuti rimasti"
 
 msgctxt "#31181"
 msgid "Hour"
@@ -775,7 +775,7 @@ msgstr "Indicatori di stato"
 
 msgctxt "#31189"
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 msgctxt "#31190"
 msgid "Video info"
@@ -783,7 +783,7 @@ msgstr "Info sul video"
 
 msgctxt "#31191"
 msgid "Enable cases for live backgrounds"
-msgstr ""
+msgstr "Abilita le copertine per gli sfondi live"
 
 msgctxt "#31192"
 msgid "Set default background"
@@ -791,11 +791,11 @@ msgstr "Imposta sfondo di default"
 
 msgctxt "#31193"
 msgid "Display extrafanart"
-msgstr ""
+msgstr "Mostra extra fanart"
 
 msgctxt "#31194"
 msgid "Display runtime in hours and minutes"
-msgstr ""
+msgstr "Mostra la durata in ore e minuti"
 
 msgctxt "#31195"
 msgid "Show time remaining on fullscreen info"
@@ -803,15 +803,15 @@ msgstr "Mostra tempo rimanente sulle informazioni a schermo intero"
 
 msgctxt "#31196"
 msgid "Replace default with Extended Info (some features and extras (+) will be unavailable)"
-msgstr ""
+msgstr "Sostituisce le informazioni standard con quelle Estese (alcune opzioni ed extra (+) saranno indisponibili)"
 
 msgctxt "#31197"
 msgid "Enable info rating (works with US Ratings only)"
-msgstr ""
+msgstr "Abilita informazioni sulla valutazione (funziona solo con le valutazioni US)"
 
 msgctxt "#31198"
 msgid "This setting controls the appearance of cases when using Live Backgrounds"
-msgstr ""
+msgstr "Questa opzione modifica la visibilità delle custodie quando si usa lo Sfondo Live"
 
 msgctxt "#31199"
 msgid "Used to select the default/fallback image skin wide"
@@ -835,7 +835,7 @@ msgstr "Nelle sale"
 
 msgctxt "#31204"
 msgid "ComingSoon"
-msgstr ""
+msgstr "Prossimamente"
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -847,7 +847,7 @@ msgstr ""
 
 msgctxt "#31207"
 msgid "Upcoming"
-msgstr ""
+msgstr "Imminente"
 
 msgctxt "#31208"
 msgid "Top Box Office"
@@ -859,11 +859,11 @@ msgstr "Al Cinema"
 
 msgctxt "#31210"
 msgid "Popular Movies"
-msgstr ""
+msgstr "Film popolari"
 
 msgctxt "#31211"
 msgid "Top Rated Movies"
-msgstr ""
+msgstr "Film più votati"
 
 msgctxt "#31212"
 msgid "Popular TV"
@@ -899,7 +899,7 @@ msgstr ""
 
 msgctxt "#31220"
 msgid "RSS Feed"
-msgstr ""
+msgstr "RSS Feed"
 
 msgctxt "#31221"
 msgid "Big"
@@ -955,7 +955,7 @@ msgstr ""
 
 msgctxt "#31234"
 msgid "Next aired"
-msgstr ""
+msgstr "Prossimo in onda"
 
 msgctxt "#31235"
 msgid "Slide Left"
@@ -1103,11 +1103,11 @@ msgstr ""
 
 msgctxt "#31271"
 msgid "Click for more"
-msgstr ""
+msgstr "Fai clic per altro"
 
 msgctxt "#31272"
 msgid "Awards"
-msgstr ""
+msgstr "Premi"
 
 msgctxt "#31273"
 msgid "Recording widget"
@@ -1115,7 +1115,7 @@ msgstr ""
 
 msgctxt "#31274"
 msgid "Artwork"
-msgstr ""
+msgstr "Artwork"
 
 msgctxt "#31275"
 msgid "Case"
@@ -1147,7 +1147,7 @@ msgstr ""
 
 msgctxt "#31282"
 msgid "Enable startup intro"
-msgstr ""
+msgstr "Abilita intro all'avvio"
 
 msgctxt "#31283"
 msgid "Auto open sidemenu when hovering over the top left corner"
@@ -1347,7 +1347,7 @@ msgstr "Installato"
 
 msgctxt "#31332"
 msgid "Not Installed or Disabled"
-msgstr ""
+msgstr "Non Installato o Disabilitato"
 
 msgctxt "#31333"
 msgid "The default behavior is to display Music information for 10 seconds after a song is played or the next track in your queue begins. To display permanently reactivate the info and do not toggle it off a second time."
@@ -1391,7 +1391,7 @@ msgstr ""
 
 msgctxt "#31343"
 msgid "Display background name"
-msgstr ""
+msgstr "Visualizza nome sfondo"
 
 msgctxt "#31344"
 msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background."
@@ -1439,7 +1439,7 @@ msgstr ""
 
 msgctxt "#31355"
 msgid "You're watching"
-msgstr ""
+msgstr "Stai guardando"
 
 msgctxt "#31356"
 msgid "Hardware decoding"
@@ -1475,7 +1475,7 @@ msgstr ""
 
 msgctxt "#31364"
 msgid "Timeshift"
-msgstr ""
+msgstr "Timeshift"
 
 msgctxt "#31365"
 msgid "Customization"
@@ -1779,7 +1779,7 @@ msgstr ""
 
 msgctxt "#31440"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Canali riprodotti di recente"
 
 msgctxt "#31441"
 msgid "[B]CONFIGURE GAME SETTINGS[/B][CR]Change gameplay options[CR]Keyboard settings  •  Configure rewind settings"
@@ -1799,7 +1799,7 @@ msgstr ""
 
 msgctxt "#31445"
 msgid "Main menu"
-msgstr ""
+msgstr "Menu principale"
 
 msgctxt "#31446"
 msgid "Hide Main Menu elements when pressing back"
@@ -1827,11 +1827,11 @@ msgstr ""
 
 msgctxt "#31452"
 msgid "Premiered"
-msgstr "Premiati"
+msgstr "Prima visione"
 
 msgctxt "#31453"
 msgid "Down for more"
-msgstr ""
+msgstr "Giù per altro"
 
 msgctxt "#31454"
 msgid "Up or down"
@@ -1959,7 +1959,7 @@ msgstr ""
 
 msgctxt "#31485"
 msgid "Eject disc"
-msgstr ""
+msgstr "Espelli disco"
 
 msgctxt "#31486"
 msgid "Use Video Lyrics mod"
@@ -2103,7 +2103,7 @@ msgstr ""
 
 msgctxt "#31521"
 msgid "More movies featuring"
-msgstr ""
+msgstr "Altri film con"
 
 msgctxt "#31522"
 msgid "Glow Bars for Menu Bar"
@@ -2159,7 +2159,7 @@ msgstr ""
 
 msgctxt "#31535"
 msgid "Unwatched TV Shows"
-msgstr ""
+msgstr "Serie TV non Viste"
 
 msgctxt "#31536"
 msgid "Recent recordings"
@@ -2175,7 +2175,7 @@ msgstr ""
 
 msgctxt "#31539"
 msgid "Random TV Shows"
-msgstr ""
+msgstr "Serie TV Casuali"
 
 msgctxt "#31540"
 msgid "Unwatched episodes"
@@ -2195,19 +2195,19 @@ msgstr ""
 
 msgctxt "#31544"
 msgid "Years old"
-msgstr ""
+msgstr "Anni precedenti"
 
 msgctxt "#31545"
 msgid "More tv shows featuring"
-msgstr ""
+msgstr "Altri programmi TV in primo piano"
 
 msgctxt "#31546"
 msgid "Known for"
-msgstr ""
+msgstr "Conosciuto per"
 
 msgctxt "#31547"
 msgid "Image gallery"
-msgstr ""
+msgstr "Galleria di immagini"
 
 msgctxt "#31548"
 msgid "Kodi random movie fanart"
@@ -2299,7 +2299,7 @@ msgstr ""
 
 msgctxt "#31570"
 msgid "Hide Channels"
-msgstr ""
+msgstr "Nascondi Canali"
 
 msgctxt "#31571"
 msgid "Show plots in set"
@@ -2331,7 +2331,7 @@ msgstr ""
 
 msgctxt "#31578"
 msgid "Random music videos"
-msgstr ""
+msgstr "Video musicali casuali"
 
 msgctxt "#31579"
 msgid "Random music videos (artists)"
@@ -2343,7 +2343,7 @@ msgstr ""
 
 msgctxt "#31581"
 msgid "Unwatched music videos"
-msgstr ""
+msgstr "Video Musicali non visti"
 
 msgctxt "#31582"
 msgid "Most played music videos"
@@ -2355,11 +2355,11 @@ msgstr ""
 
 msgctxt "#31584"
 msgid "Random artists"
-msgstr ""
+msgstr "Artisti casuali"
 
 msgctxt "#31585"
 msgid "Most played songs"
-msgstr ""
+msgstr "Canzoni più riprodotte"
 
 msgctxt "#31586"
 msgid "Prefer clean pause screen"
@@ -2727,11 +2727,11 @@ msgstr ""
 # empty strings from id 31805 to 31849
 msgctxt "#31850"
 msgid "Budget"
-msgstr ""
+msgstr "Bilancio"
 
 msgctxt "#31851"
 msgid "Revenue"
-msgstr ""
+msgstr "Incassi"
 
 msgctxt "#31852"
 msgid "Displays a larger ratings classification image with standard descriptions.[CR]Works with U.S. MPAA ratings only."
@@ -3018,7 +3018,7 @@ msgstr ""
 
 msgctxt "#31980"
 msgid "Change the way the home menu scrolls in Aeon Nox. Default will scroll in a cycle. \"Fixed\" has a beginning and end."
-msgstr ""
+msgstr "Cambia il modo in cui scorre il Menu principale di Aeon Nox. Di default scorre in circolo. \"Fisso\" invece, ha un inizio e una fine."
 
 msgctxt "#31981"
 msgid "Show Plot and Cast information when pressing info button during video playback."
